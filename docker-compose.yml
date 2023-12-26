@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  nest-db:
+    image: postgres:latest
+    ports:
+      - '4000:5432'
+    environment:
+      POSTGRES_DB: nest_db
+      POSTGRES_USER: nest_user
+      POSTGRES_PASSWORD: 1234
+    networks:
+      - nest
+networks:
+  nest:
